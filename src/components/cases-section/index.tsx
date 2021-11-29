@@ -6,56 +6,36 @@ const ParticleBg = () => (
   <Particles
     params={{
       particles: {
-        number: {
-          value: 400,
-          density: {
-            enable: true,
-            value_area: 3000,
-          },
-        },
-        line_linked: {
-          enable: false,
-        },
-        move: {
-          direction: `right`,
-          speed: 0.3,
-        },
-        size: {
-          value: 1,
-        },
-        opacity: {
-          anim: {
-            enable: true,
-            speed: 0.5,
-            opacity_min: 0.1,
-          },
+        shape: {
+          type: `images`,
+          image: [
+            { src: `public/images/suzuka.png`, height: 20, width: 20 },
+            { src: `public/images/silverstone.png`, height: 20, width: 20 },
+            { src: `spain.png`, height: 20, width: 20 },
+            { src: `suzuka.png`, height: 20, width: 20 },
+          ],
         },
       },
-      interactivity: {
-        events: {
-          onclick: {
-            enable: false,
-          },
-        },
-      },
-      retina_detect: true,
     }}
   />
 );
 
 const articles = [
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit excepteur ipsum esse.`,
-    image: `/images/case-1.webp`,
+    title: `Real Time Dashboard`,
+    desc: `Labore duis pariatur est exercitation laboris cupidatat amet cillum. Amet nisi ullamco.`,
+    image: `/images/lapdash.png`,
     alt: `Proident pariatur est.`,
   },
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit ipsum esse.`,
-    image: `/images/case-2.webp`,
+    title: `Laptime Leaderboard`,
+    desc: `Labore duis pariatur est exercitation laboris cupidatat amet cillum. Amet nisi ullamco.`,
+    image: `/images/lapleaderboad.png`,
     alt: `Proident pariatur est.`,
   },
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit excepteur esse.`,
+    title: `Your data, your project`,
+    desc: `Labore duis pariatur est exercitation laboris cupidatat amet cillum. Amet nisi ullamco.`,
     image: `/images/case-3.webp`,
     alt: `Proident pariatur est.`,
   },
@@ -68,9 +48,9 @@ const CasesSection = () => (
         <ParticleBg />
       </div>
       <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20 lg:pt-40`)}>
-        <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>What will you build?</h1>
+        <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>How will you race?</h1>
         <p className={tw(`text-white text-gray-400 text-center text-xl mt-12`)}>
-          Don’t just take our word for it — see what leaders in digital are saying
+          Lapper.gg Enables you to race to do more with your racing data
         </p>
         <div className={tw(`mx-auto pt-24`)}>
           <div className={tw(`w-full flex flex-wrap justify-around`)}>
@@ -92,20 +72,11 @@ const CasesSection = () => (
                   />
                 </div>
                 <div className={tw(`p-4 shadow-lg w-full mx-auto -mt-8 bg-white rounded-b z-30 relative`)}>
-                  <p className={tw(`uppercase text-sm text-gray-700 text-center pb-1`)}>Case study</p>
-                  <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.title}</p>
+                  <p className={tw(`uppercase text-sm text-gray-700 text-center pb-1`)}>{article.title}</p>
+                  <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.desc}</p>
                 </div>
               </div>
             ))}
-            <span
-              className={tw(
-                `-mt-8 pb-12 lg:mt-4 flex items-center text-xl
-                text-indigo-400 cursor-pointer z-30 hover:text-indigo-600`,
-              )}
-            >
-              See all case studies
-              <Arrow className={tw(`h-6 w-6 fill-current ml-2`)} />
-            </span>
           </div>
         </div>
       </div>

@@ -12,36 +12,17 @@ type Link = {
   href: string;
 };
 
-const links = [
-  {
-    label: `Features`,
-    href: `/`,
-  },
-  {
-    label: `Testimonials`,
-    href: `/`,
-  },
-  {
-    label: `Pricing`,
-    href: `/`,
-  },
-  {
-    label: `Blog`,
-    href: `/`,
-  },
-];
-
 const secondaryLinks = [
   {
-    label: `Contact sales`,
+    label: `Tutorial`,
     href: `/`,
   },
   {
-    label: `Log in`,
+    label: `Join`,
     href: `/`,
   },
   {
-    label: `Get Started`,
+    label: `Host`,
     href: `/`,
   },
 ];
@@ -87,13 +68,6 @@ const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
 
 const MobileMenu = () => (
   <div className={tw(`md:hidden`)}>
-    <div className={tw(`px-2 pt-2 pb-3 space-y-1 sm:px-3`)}>
-      {links.map((link: Link) => (
-        <a href={link.href} className={tw(`text-gray-500 block px-3 py-2 text-base font-medium`)} key={link.label}>
-          {link.label}
-        </a>
-      ))}
-    </div>
     <div className={tw(`pt-4 pb-3 border-t border-gray-400`)}>
       <div className={tw(`px-2 space-y-1`)}>
         {secondaryLinks.map((link: Link) => (
@@ -124,23 +98,22 @@ const Navigation = () => {
             </div>
             <div className={tw(`hidden md:block`)}>
               <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
-                {links.map((link: Link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className={tw(`text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                <h1
+                  className={tw(
+                    `font-sans font-bold text-2xl md:text-3xl lg:text-4xl text-center leading-snug text-gray-800`,
+                  )}
+                >
+                  Lapper.gg
+                </h1>
               </div>
             </div>
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <Button modifier="border-0 mr-2">Contact sales</Button>
-              <Button modifier="border-0 mr-2">Log in</Button>
-              <Button primary>Get started</Button>
+              <Button modifier="border-0 mr-2">Tutorial</Button>
+              <Button modifier="border-0 mr-2">Join</Button>
+              <Button modifier="border-0 mr-2">Host</Button>
+              <Button primary>Download</Button>
             </div>
           </div>
           <div className={tw(`-mr-2 flex md:hidden`)}>
