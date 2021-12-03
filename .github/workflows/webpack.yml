@@ -10,17 +10,13 @@ env:
   Branches: master
   MainBranch: master
   NPMRegistry: https://registry.npmjs.org/
-  InstallCommand: npm i
+  InstallCommand: npm ci
   BuildCommand: npm run build
-  Output: ./.next
+  Output: ./.next/server/pages
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
     
     steps:
         # checkout repository
@@ -66,7 +62,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
