@@ -12,7 +12,7 @@ env:
   NPMRegistry: https://registry.npmjs.org/
   InstallCommand: npm ci
   BuildCommand: npm run build
-  Output: ./.next
+  Output: ./.next/server/pages
 
 jobs:
   build:
