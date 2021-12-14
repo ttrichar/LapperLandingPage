@@ -11,7 +11,7 @@ env:
   MainBranch: master
   NPMRegistry: https://registry.npmjs.org/
   InstallCommand: npm ci
-  BuildCommand: npm run build
+  BuildCommand: npm run build &amp; npm run export
   Output: ./out
 
 jobs:
