@@ -26,7 +26,7 @@ const secondaryLinks = [
     href: `/host`,
   },
   {
-    label: `Sign Up`,
+    label: `Sign Up Please`,
     href: `/signup`,
   },
 ];
