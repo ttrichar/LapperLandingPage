@@ -15,15 +15,19 @@ type Link = {
 const secondaryLinks = [
   {
     label: `Tutorial`,
-    href: `/`,
+    href: `/tutorial`,
   },
   {
     label: `Join`,
-    href: `/`,
+    href: `/join`,
   },
   {
     label: `Host`,
-    href: `/`,
+    href: `/host`,
+  },
+  {
+    label: `Sign Up`,
+    href: `/signup`,
   },
 ];
 
