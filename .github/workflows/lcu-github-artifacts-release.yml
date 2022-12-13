@@ -1,4 +1,4 @@
-name: GitHub Artifacts - Release
+name: ttrichar/LapperLandingPage
 
 on:
   push:
@@ -13,9 +13,9 @@ env:
   Branches: master
   MainBranch: master
   NPMRegistry: https://registry.npmjs.org/
-  InstallCommand: npm ci
+  InstallCommand: npm i
   BuildCommand: npm run build
-  Output: ./
+  Output: ./out
 
 jobs:
   build:
